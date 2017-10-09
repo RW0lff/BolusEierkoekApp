@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Count
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h1>{{bolusCounter}}<button ion-button large clear color="danger" (click)="minBolus()"><ion-icon name="remove-circle"></ion-icon></button></h1>        
+      </ion-col>
+      <ion-col>
+        <h1>{{eierkoekCounter}}<button ion-button large clear color="danger" (click)="minEierkoek()"><ion-icon name="remove-circle"></ion-icon></button></h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button class="bolus" ion-button round large clear (click)="addBolus()"><img src="assets/img/bolus.png"></button>
+      </ion-col>
+      <ion-col>
+        <button class="eierkoek" ion-button round large clear (click)="addEierkoek()"><img src="assets/img/eierkoek.png"></button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-fab left bottom>
+    <button ion-button block round outline (click)="clear()">Clear</button>
+  </ion-fab>
+  <ion-fab right bottom>
+    <button ion-button block color="secondary" round (click)="itemTapped($event, bolusCounter, eierkoekCounter)">Done</button>
+  </ion-fab>
+</ion-content>
