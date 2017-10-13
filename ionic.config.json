@@ -1,0 +1,8 @@
+{
+  "name": "BolusEierkoekApp",
+  "app_id": "1b043817",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
